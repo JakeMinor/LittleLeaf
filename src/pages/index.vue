@@ -4,7 +4,7 @@ import SplashScreen from "../components/index/SplashScreen.vue";
 
 <template>
   <SplashScreen />
-  
+
 </template>
 
 <style scoped>
