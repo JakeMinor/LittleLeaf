@@ -1,19 +1,21 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
+import VueRouter from 'unplugin-vue-router/vite'
 import { join, resolve } from "path";
 //@ts-ignore
 import IstanbulPlugin  from "vite-plugin-istanbul";
 
 export default defineConfig(({ mode}) => ({
   plugins: [
-    vue(),
     IstanbulPlugin({
       include: "src/*",
       exclude: ["node_modules", "test/"],
       extension: [".js", ".cjs", ".mjs", ".ts", ".tsx", ".jsx", ".vue"],
       cypress: mode === "test",
       forceBuildInstrument: mode === "test"
-    })
+    }),
+    VueRouter(),
+    vue()
   ],
   resolve: {
     alias: [

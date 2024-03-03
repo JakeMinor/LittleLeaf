@@ -1,7 +1,8 @@
 <script setup lang="ts">
+import Navbar from "../src/components/Navbar.vue";
 </script>
 
 <template>
-  <h1 class="text-3xl font-bold underline mb-10">Test Tailwind</h1>
-  <button class="btn btn-primary">Test Daisy</button>
+  <navbar />
+  <RouterView />
 </template>
